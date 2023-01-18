@@ -993,7 +993,8 @@ const initServer = async () => {
 
 
 
-    let landingobj=pageNamelistURL;
+		let landingobj=pageNamelistURL;
+		let landing_trimed=JSON.parse(JSON.stringify(landingobj));
     let appenstring;
     let appenstring_all;
     for(var k=0;k<popularlist.length;k++){
@@ -1007,16 +1008,18 @@ const initServer = async () => {
           }
           
           $$("#popular").html(appenstring);
-          landingobj.splice(i, 1);
+					
+          landing_trimed.splice(i, 1);
+
         }
       }
       
     }
-    for (var i=0;i<landingobj.length;i++){
+    for (var i=0;i<landing_trimed.length;i++){
       if(appenstring_all!=undefined){
-        appenstring_all=appenstring_all+`<div class='items'><a href='./${landingobj[i].FILE}.html'>${landingobj[i][countrys[c].toUpperCase()]}</a></div>`;
+        appenstring_all=appenstring_all+`<div class='items'><a href='./${landing_trimed[i].FILE}.html'>${landing_trimed[i][countrys[c].toUpperCase()]}</a></div>`;
       }else{
-        appenstring_all=`<div class='items'><a href='./${landingobj[i].FILE}.html'>${landingobj[i][countrys[c].toUpperCase()]}</a></div>`;
+        appenstring_all=`<div class='items'><a href='./${landing_trimed[i].FILE}.html'>${landing_trimed[i][countrys[c].toUpperCase()]}</a></div>`;
       }
       $$("#sportatoz").html(appenstring_all);
       
