@@ -980,6 +980,14 @@ const initServer = async () => {
 		if($$("script").length>0){
 			$$("script").remove();
 		}
+		if($$("meta[name='viewport']").length==0){
+	
+			$$("head").prepend("<meta name='viewport' content='width=device-width, initial-scale=1'></meta>");
+		}
+
+
+
+
     let landingobj=pageNamelistURL;
     let appenstring;
     let appenstring_all;
@@ -1026,7 +1034,7 @@ const initServer = async () => {
     
         let filename=Object.values(localization["All Terms"])[i].FILE;
  
-
+				
         
        
         if($("style").length>0){
@@ -1045,6 +1053,10 @@ const initServer = async () => {
         }
         $.root().contents().filter(isComment).remove();
         $('head').contents().filter(isComment).remove();
+		
+	
+		$("head").prepend("<meta name='viewport' content='width=device-width, initial-scale=1'></meta>");
+		
         $('body').contents().filter(isComment).remove();
         let headerhtml=`<h1 id='sportRule'><a id='back' href='./landing.html'><img alt='back' src='../../img/chevron_left.png'/></a><div id='pageSubName'>${sptitle[countrys[c].toUpperCase()]}</div><div id='pageName'>${Object.values(localization["All Terms"])[i][countrys[c].toUpperCase()]}</div></h1>`;
         
