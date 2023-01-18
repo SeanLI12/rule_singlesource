@@ -1,2 +1,1 @@
-# rule_singlesource
-singlesource version
+# creditRule

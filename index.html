@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/rules-style.css">
+    
+  </head>
+  <body style="background-color: black; margin:0" >
+    <h1 id="sportRule" class="home">
+      <a id="back" href="../index.html"><img alt="back" src="../img/chevron_left.png"/></a>
+      <div id="pageSubName"></div>
+      <div id="pageName"></div>
+    </h1>
+    <iframe id="mainiframe"  src="./landing.html?lang=EN" frameborder="0" width="100%" height="100%" scrolling="no" ></iframe>
+  </body>
+  <script>
+    document.getElementById("sportRule").addEventListener("click", () => {
+      window.scrollTo(0, 0);
+    })
+    window.onmessage = function(event) {
+      window.scrollTo(0, 0);
+      switch (event.data.topic) {
+        case "setScrollValue":
+          document.getElementById("mainiframe").contentWindow.scroll(0, 0);
+          break;
+        case "changeContent":
+          document.getElementById("mainiframe").style.height = event.data.data + "px";
+          break;
+        case "changeTitle":
+          if (event.data.data.pageName == '') {
+            document.getElementById("sportRule").classList.add("home");
+            document.getElementById("pageSubName").innerText = event.data.data.title;
+          } else {
+            document.getElementById("sportRule").classList.remove("home");
+            document.getElementById("pageName").innerText = event.data.data.pageName;
+            if (event.data.data.title != "") {
+              document.getElementById("pageSubName").innerText = event.data.data.title;
+            }
+          }
+          break;
+        default:
+      }
+    }
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const lang = urlParams.get('lang').toUpperCase();
+    var ifview = document.getElementById('mainiframe');
+    const newLocation = "./landing.html?v=" + Date.now() + "&lang=" + lang;
+    document.getElementById("back").setAttribute("href", "../index.html?lang=" + lang);
+    ifview.src = newLocation;
+  </script>
+</html>
