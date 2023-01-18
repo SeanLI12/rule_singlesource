@@ -980,6 +980,16 @@ const initServer = async () => {
 		if($$("script").length>0){
 			$$("script").remove();
 		}
+<<<<<<< HEAD
+		if($$("meta[name='viewport']").length=0){
+	
+			$$("head").prepend("<meta name='viewport' content='width=device-width, initial-scale=1'></meta>");
+		}
+
+
+
+
+=======
 		if($$("meta[name='viewport']").length==0){
 	
 			$$("head").prepend("<meta name='viewport' content='width=device-width, initial-scale=1'></meta>");
@@ -988,6 +998,7 @@ const initServer = async () => {
 
 
 
+>>>>>>> d00952be2773d7363e439a42a921b1699860b618
     let landingobj=pageNamelistURL;
     let appenstring;
     let appenstring_all;
@@ -1034,6 +1045,10 @@ const initServer = async () => {
     
         let filename=Object.values(localization["All Terms"])[i].FILE;
  
+				if($$("meta[name='viewport']").length=0){
+	
+					$$("head").prepend("<meta name='viewport' content='width=device-width, initial-scale=1'></meta>");
+				}
 				
         
        
