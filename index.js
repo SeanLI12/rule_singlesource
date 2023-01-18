@@ -1054,8 +1054,8 @@ const initServer = async () => {
         }
 
         if($("link").length>0){
-          //$$("link").attr("href","https://sports-preview.188sbk.com/assets/sportsRules/css/rules-style.css?vs=a68aa80008");
-			$$("link").attr("href","../../../css/rules-style.css?vs=a68aa80008");
+          //$("link").attr("href","https://sports-preview.188sbk.com/assets/sportsRules/css/rules-style.css?vs=a68aa80008");
+			$("link").attr("href","../../../css/rules-style.css?vs=a68aa80008");
         }
         function isComment(index, node) {
           return node.type === 'comment'
