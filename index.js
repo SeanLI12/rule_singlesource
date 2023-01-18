@@ -412,7 +412,7 @@ let localization={
 		  "PT":"Judô",
 		  "TH":"ยูโด/มวยปล้ำ/เทควันโด",
 		  "VI":"Judo / Đấu Vật / Taekwondo",
-		  "FILE":"Judo"
+		  "FILE":"judo"
 	   },
 	   {
 		  "_CMSKEY":"o_LOTTERY",
@@ -974,7 +974,8 @@ const initServer = async () => {
 			$$("img").attr("src","../../img/banner.png");
 		}
 		if($$("link").length>0){
-			$$("link").attr("href","https://sports-preview.188sbk.com/assets/sportsRules/css/rules-style.css?vs=a68aa80008");
+			//$$("link").attr("href","https://sports-preview.188sbk.com/assets/sportsRules/css/rules-style.css?vs=a68aa80008");
+			$$("link").attr("href","../../../css/rules-style.css?vs=a68aa80008");
 		}
 		if($$("script").length>0){
 			$$("script").remove();
@@ -1036,7 +1037,8 @@ const initServer = async () => {
         }
 
         if($("link").length>0){
-          $("link").attr("href","https://sports-preview.188sbk.com/assets/sportsRules/css/rules-style.css?vs=a68aa80008");
+          //$$("link").attr("href","https://sports-preview.188sbk.com/assets/sportsRules/css/rules-style.css?vs=a68aa80008");
+			$$("link").attr("href","../../../css/rules-style.css?vs=a68aa80008");
         }
         function isComment(index, node) {
           return node.type === 'comment'
