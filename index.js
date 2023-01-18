@@ -997,6 +997,7 @@ const initServer = async () => {
 		let landing_trimed=JSON.parse(JSON.stringify(landingobj));
     let appenstring;
     let appenstring_all;
+		//render pupular list for landing
     for(var k=0;k<popularlist.length;k++){
       
       for(var i=0;i<pageNamelistURL.length;i++){
@@ -1015,6 +1016,7 @@ const initServer = async () => {
       }
       
     }
+		//render rest of list for landing
     for (var i=0;i<landing_trimed.length;i++){
       if(appenstring_all!=undefined){
         appenstring_all=appenstring_all+`<div class='items'><a href='./${landing_trimed[i].FILE}.html'>${landing_trimed[i][countrys[c].toUpperCase()]}</a></div>`;
