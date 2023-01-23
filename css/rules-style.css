@@ -714,6 +714,9 @@ figure.table #linktable td{
   padding-top: 8px;
   padding-bottom: 8px;
 }
+#pagetop{
+  display: none;
+}
 body{
   margin:0;
 }
