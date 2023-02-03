@@ -471,6 +471,19 @@ let localization={
 		  "FILE":"rowing"
 	   },
 	   {
+		  "_CMSKEY":"o_RUGBY",
+		  "EN":"Rugby",
+		  "ZH":"橄榄球联盟",
+		  "ID":"Rugby",
+		  "JA":"ラグビー",
+		  "KM":"កីឡាបាល់ឱប",
+		  "KO":"럭비 유니언 / 럭비 리그",
+		  "PT":"Rugby",
+		  "TH":"รักบี้ ลีก",
+		  "VI":"Bóng Bầu Dục",
+		  "FILE":"rugby"
+	   },
+	   {
 		  "_CMSKEY":"o_SOFTBALL",
 		  "EN":"Softball",
 		  "ZH":"垒球",
@@ -599,19 +612,6 @@ let localization={
 		  "TH":"ฟรีเดิมพัน",
 		  "VI":"Cược Miễn Phí",
 		  "FILE":"free-bets"
-	   },
-	   {
-		  "_CMSKEY":"o_RUGBY",
-		  "EN":"Rugby",
-		  "ZH":"橄榄球联盟",
-		  "ID":"Rugby",
-		  "JA":"ラグビー",
-		  "KM":"កីឡាបាល់ឱប",
-		  "KO":"럭비 유니언 / 럭비 리그",
-		  "PT":"Rugby",
-		  "TH":"รักบี้ ลีก",
-		  "VI":"Bóng Bầu Dục",
-		  "FILE":"rugby"
 	   },
 	   {
 		  "_CMSKEY":"o_ALLSPORTSATOZ",

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="javascript">
+      const canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d');
+
+const triangle = {
+    x1: 100,
+    y1: 50,
+    x2: 150,
+    y2: 100,
+    x3: 50,
+    y3: 100
+};
+
+const targetX = 200;
+const targetY = 200;
+
+function drawTriangle() {
+    context.beginPath();
+    context.moveTo(triangle.x1, triangle.y1);
+    context.lineTo(triangle.x2, triangle.y2);
+    context.lineTo(triangle.x3, triangle.y3);
+    context.closePath();
+    context.fill();
+}
+
+function rotateTriangle() {
+    const angle = Math.atan2(targetY - triangle.y1, targetX - triangle.x1);
+    const cos = Math.cos(angle);
+    const sin = Math.sin(angle);
+
+    triangle.x2 = triangle.x1 + (triangle.x2 - triangle.x1) * cos - (triangle.y2 - triangle.y1) * sin;
+    triangle.y2 = triangle.y1 + (triangle.x2 - triangle.x1) * sin + (triangle.y2 - triangle.y1) * cos;
+    triangle.x3 = triangle.x1 + (triangle.x3 - triangle.x1) * cos - (triangle.y3 - triangle.y1) * sin;
+    triangle.y3 = triangle.y1 + (triangle.x3 - triangle.x1) * sin + (triangle.y3 - triangle.y1) * cos;
+}
+
+function loop() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    rotateTriangle();
+    drawTriangle();
+    requestAnimationFrame(loop);
+}
+
+requestAnimationFrame(loop);
+    </script>
+
+  </head>
+  <body></body>
+</html>
+<head>
+
+</head>
+<body
